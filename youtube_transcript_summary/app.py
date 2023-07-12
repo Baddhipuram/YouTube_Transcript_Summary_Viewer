@@ -13,10 +13,6 @@ app = Flask(__name__)
 nlp = spacy.load("en_core_web_sm")
 translator = Translator()
 
-@app.route("/hello")
-def hello():
-    return "hello"
-    
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
